@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mycompany:
+    image: postgres
+    container_name: mycompany
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_USER: mycompany
+      POSTGRES_PASSWORD: mycompany
+      POSTGRES_DB: mycompany
+    restart: unless-stopped
+
+  quarkus_test:
+    image: postgres
+    container_name: quarkus_test
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_USER: quarkus_test
+      POSTGRES_PASSWORD: quarkus_test
+      POSTGRES_DB: quarkus_test
+    restart: unless-stopped
+
+  base:
+    image: postgres
+    container_name: testinho
+    ports:
+      - "127.0.0.1:5434:5432"
+    environment:
+      POSTGRES_USER: "testinho"
+      POSTGRES_PASSWORD: "testinho"
+      POSTGRES_DB: testinho
+    restart: unless-stopped
