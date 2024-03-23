@@ -80,7 +80,7 @@ The 'quarkus_test' database should be listening on port 5432 and the 'mycompany'
 
 Connection properties for the Agroal datasource are defined in the standard Quarkus configuration file, [src/main/resources/application.properties](src/main/resources/application.properties).
 The database schemas are created using [Flyway](https://quarkus.io/guides/flyway) and the configuration can be found in 
-[src/main/resources/database/base/V1.0.0__create_fruits.sql](src/main/resources/database/base/V1.0.0__create_fruits.sql) and
+[src/main/resources/database/base/V1.0.0__create_fruits.sql](src/main/resources/db/migration/V1.0.0__create_fruits.sql) and
 [src/main/resources/database/mycompany/V1.0.0__create_fruits.sql](src/main/resources/database/mycompany/V1.0.0__create_fruits.sql).
 
 #### Start Quarkus in development mode (Profile 'database')

@@ -1,4 +1,4 @@
-package org.acme.hibernate.orm;
+package org.acme.hibernate.orm.resource;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -9,6 +9,8 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
+import org.acme.hibernate.orm.model.Fruit;
+import org.acme.hibernate.orm.repository.CommonRepo;
 import org.jboss.logging.Logger;
 import org.jboss.resteasy.reactive.RestQuery;
 
