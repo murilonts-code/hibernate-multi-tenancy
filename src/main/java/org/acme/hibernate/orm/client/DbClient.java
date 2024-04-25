@@ -14,6 +14,6 @@ public interface DbClient {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("{ten}")
+    @Path("jdbc/{ten}")
     DBConnectionInfo getList(@PathParam("ten")String ten);
 }

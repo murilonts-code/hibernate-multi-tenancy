@@ -44,8 +44,7 @@ public class TaskBean {
                                     .withIntervalInSeconds(5)
                                     .repeatForever())
                     .build();
-            quartz.clear();
-//            quartz.scheduleJob(job, trigger);
+            quartz.scheduleJob(job, trigger);
         } catch (SchedulerException e) {
             LOGGER.error(e.getMessage());
         }

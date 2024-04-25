@@ -75,8 +75,8 @@ public class CustomDatabaseTenant implements TenantConnectionResolver {
                     .cleanDisabled(false)
                     .load();
 
-            flyway.clean();
             flyway.migrate();
+            flyway.validate();
 
             var txIntegration = new NarayanaTransactionIntegration(txManager, txSyncRegistry, null, false, null);
             var dataSourceConfiguration = new AgroalDataSourceConfigurationSupplier()
